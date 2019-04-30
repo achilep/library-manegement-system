@@ -1,12 +1,42 @@
 <?xml version='1.0' encoding='UTF-8' ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:h="http://xmlns.jcp.org/jsf/html">
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
     <h:head>
-        <title>Facelet Title</title>
+        <title>REGISTRATION</title>
     </h:head>
-    <body>
-        welcom to our library mangement system
-    </body>
+    <h:body>
+        <h1 style="background:red;">welcom to our library mangement system<br/>
+            
+            PLEASE FILL THE FORM TO REGISTER. 
+        </h1>
+        
+         <!-- Use h:panelGrid -->
+          <h:panelGrid columns="6" style="color:green"> 
+              <h:outputLabel value="fisrtname"/> 
+              <h:inputText id="fisrtname" value="#{register.fisrtname}" /> 
+              <h:outputLabel value="lastname" /> 
+              <h:inputText id="lastname" value="#{register.lastname}"/>
+              <h:outputLabel value="date of bith" /> 
+              <h:inputText id="date_of_bith" value="#{register.date_of_birth}"/>
+              <h:outputLabel value="username" /> 
+              <h:inputText id="username" value="#{register.username}"/>
+              <h:outputLabel value="phone number" /> 
+              <h:inputText id="phone_number" value="#{register.phone_number}"/>
+              <h:outputLabel value="email" /> 
+              <h:inputText id="email" value="#{register.email}"/> 
+              <h:outputLabel value="town" /> 
+              <h:inputText id="town" value="#{register.town}"/>
+              <h:outputLabel value="password" /> 
+              <h:inputText id="password" value="#{register.password}" />
+          </h:panelGrid> 
+          <!-- Use command button -->
+          <h:form>
+          <h:commandButton id="cmdinsert" value="Register" action="#{register.valide}"/> 
+          <br /> 
+          <h:outputText escape="false" style="color:GREEN"  />
+          </h:form>
+     </h:body>
 </html>
 
